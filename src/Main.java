@@ -4,12 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int i = 0;
-        int sum = 0;
-        for( i =0;i<=n;i+=3){
-            sum = sum+i;
+        float n = scn.nextFloat();
+        float max = n;
+        float min = n;
+        for( int i =1;i<=10;i++){
+            n = scn.nextFloat();
+            if (max<n){
+                max=n;
+            }else if (min>n){
+                min = n;
+            }
         }
-        System.out.println(sum);
+        System.out.println(max);
+        System.out.println(min);
     }
 }
